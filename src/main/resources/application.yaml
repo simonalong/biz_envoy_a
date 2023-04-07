@@ -1,0 +1,21 @@
+server:
+  port: 18000
+spring:
+  application:
+    name: isc-config-service
+  redis:
+    host: redis-service
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 40
+        max-idle: 10
+        max-wait: 2000ms
+        min-idle: 5
+      shutdown-timeout: 200ms
+      timeout: 2000ms
+
+biz:
+  url:
+    # d: http://biz-d-service:18003
+    d: http://localhost:18003
